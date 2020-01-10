@@ -25,12 +25,12 @@
   * Please submit bug reports, patches, etc to https://github.com/welltime/phpagi
   *
   */
-/*
+
   if(!class_exists('AGI'))
   {
     require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'phpagi.php');
   }
-*/
+
  /**
   * Asterisk Manager class
   *
@@ -936,12 +936,13 @@
       if(isset($this->event_handlers[$e])) $handler = $this->event_handlers[$e];
       elseif(isset($this->event_handlers['*'])) $handler = $this->event_handlers['*'];
 
-      if(function_exists($handler))
+      if(is_array($handler) && count($handler) == 2 && is_object($handler[0]) && method_exists($handler[0], $handler[1])){
+        $ret = $handler[0]->{$handler[1]}($e, $parameters, $this->server, $this->port);
+      }
+      else if(function_exists($handler))
       {
         $this->log("Execute handler $handler");
         $ret = $handler($e, $parameters, $this->server, $this->port);
-      } elseif (is_array($handler)) {
-        $ret = call_user_func($handler, $e, $parameters, $this->server, $this->port);
       }
       else
         $this->log("No event handler for event '$e'");
