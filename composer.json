@@ -5,7 +5,7 @@
 	"autoload": {
 		"psr-4": {
 		    "phpAGI\\": "src/"
-		},
+		}
 	},
 	"require": {
 	    "php": "^7.2"
