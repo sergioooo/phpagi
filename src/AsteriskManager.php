@@ -1,6 +1,6 @@
 <?php
 namespace phpAGI;
- /**
+ /** 
   * phpagi-asmanager.php : PHP Asterisk Manager functions
   * @see https://github.com/welltime/phpagi
   * @filesource http://phpagi.sourceforge.net/
