@@ -1,5 +1,4 @@
 <?php
-namespace phpAGI;
  /** 
   * phpagi-asmanager.php : PHP Asterisk Manager functions
   * @see https://github.com/welltime/phpagi
