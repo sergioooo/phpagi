@@ -2,6 +2,11 @@
 	"name": "sergioooo/phpagi",
 	"description": "PHPAGI is a PHP Class for writing AGI applications for use with the open source Asterisk PBX software.",
 	"license": "GPL-2.0-or-later",
+	"autoload": {
+		"psr-4": {
+		    "phpAGI\\": "src/"
+		},
+	},
 	"require": {
 	    "php": "^7.2"
 	}
