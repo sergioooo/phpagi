@@ -1,0 +1,7 @@
+{
+	"name": "sergioooo/phpagi",
+	"description": "PHPAGI is a PHP Class for writing AGI applications for use with the open source Asterisk PBX software.",
+	"require": {
+	    "php": "^7.2"
+	}
+}
