@@ -1,6 +1,6 @@
 <?php
 /**
- * phpagi-asmanager.php : PHP Asterisk Manager functions
+ * AGI_AsteriskManager.php : PHP Asterisk Manager functions
  * Website: http://phpagi.sourceforge.net
  *
  * $Id: phpagi-asmanager.php,v 1.10 2005/05/25 18:43:48 pinhole Exp $

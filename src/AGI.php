@@ -1,7 +1,7 @@
 <?php
 
 /**
-* phpagi.php : PHP AGI Functions for Asterisk
+* AGI.php : PHP AGI Functions for Asterisk
 * Website: http://phpagi.sourceforge.net/
 *
 * $Id: phpagi.php,v 2.20 2010/09/30 02:21:00 masham Exp $

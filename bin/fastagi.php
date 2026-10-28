@@ -1,7 +1,7 @@
 #!/usr/local/bin/php -q
 <?php
  /**
-  * phpagi-fastagi.php : PHP FastAGI bootstrap
+  * fastagi.php : PHP FastAGI bootstrap
   * Website: http://phpagi.sourceforge.net
   *
   * $Id: phpagi-fastagi.php,v 1.2 2005/05/25 18:43:48 pinhole Exp $
@@ -34,7 +34,7 @@ $fastagi = new AGI();
 $fastagi->verbose(print_r($fastagi, true));
 
 if(!isset($fastagi->config['fastagi']['basedir']))
-	$fastagi->config['fastagi']['basedir'] = dirname(__FILE__);
+	$fastagi->config['fastagi']['basedir'] = dirname(__DIR__) . '/src';
 
 // perform some security checks
 

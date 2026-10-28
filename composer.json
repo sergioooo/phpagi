@@ -4,12 +4,12 @@
 	"license": "GPL-2.0-or-later",
 	"autoload": {
 		"classmap": [
-			"src/phpagi.php",
-			"src/phpagi-asmanager.php",
-			"src/phpagi-channel-state.php"
+			"src/AGI.php",
+			"src/AGI_AsteriskManager.php",
+			"src/AGI_ChannelState.php"
 		],
 		"files": [
-			"src/phpagi-constants.php"
+			"src/constants.php"
 		]
 	},
 	"require": {
@@ -20,6 +20,6 @@
 		"test": "php tests/compatibility.php"
 	},
 	"bin": [
-		"src/phpagi-fastagi.php"
+		"bin/fastagi.php"
 	]
 }

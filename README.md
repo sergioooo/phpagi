@@ -1,5 +1,9 @@
 # PHPAGI 3.0.0
 
+This project is a modernization of the original PHPAGI library for modern PHP,
+with typed properties and method signatures, enums, and Composer autoloading.
+Proudly modernized using Codex.
+
 PHPAGI provides PHP interfaces for Asterisk's AGI protocol and Asterisk Manager
 Interface (AMI). It includes helpers for answering calls, playing prompts,
 collecting DTMF digits, reading channel variables, and handling manager events.
@@ -173,11 +177,13 @@ error handler, change `error_reporting()`, or email PHP errors. Configure PHP er
 reporting and any custom handler in your application. The legacy `error_handler`
 and `admin` options and `phpagi_error_handler()` function have been removed.
 
-The FastAGI bootstrap is installed as `vendor/bin/phpagi-fastagi.php` in consumer
+The FastAGI bootstrap is installed as `vendor/bin/fastagi.php` in consumer
 applications. Configure your FastAGI service to execute that Composer binary so it
 uses the application's autoloader. In this checkout, run
-`php src/phpagi-fastagi.php` after `composer install`. The bootstrap expects the
+`php bin/fastagi.php` after `composer install`. The bootstrap expects the
 connection on standard input and output; it is not a standalone TCP server.
+The default script directory remains the package's `src/` directory; configure
+`[fastagi] basedir` to use your application's AGI scripts directory.
 Its existing path validation and configuration logging need attention before
 exposing it to untrusted clients.
 
